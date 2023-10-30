@@ -1,0 +1,29 @@
+package com.practiceproblems;
+
+public class LexicographySwap {
+    public static void sort(String arr[]) {
+    	int n=arr.length;
+    	for(int i=0;i<n-1;i++) {
+    		int min=i;
+    		for(int j=i+1;j<n;j++) {
+    			if(arr[j].compareTo(arr[min])<0) {
+    				String temp=arr[j];
+    				arr[j]=arr[min];
+    				arr[min]=temp;
+    			}
+    			}
+
+    		}
+    	
+		for(String k:arr) {
+			System.out.print(k+" ");
+		}
+    	
+    }
+	public static void main(String[] args) {
+		String arr[]= {"apple","mango","orange","kiki"};
+		sort(arr);
+
+	}
+
+}
