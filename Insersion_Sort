@@ -1,0 +1,27 @@
+package com.insersionsort;
+
+public class InsersionSort {
+      public static int[] InsersionSort(int[] a) {
+    	  int n=a.length;
+    	  for(int i=1;i<n;i++) {
+    		  int j=i;
+    		  while(j>0 && a[j]<a[j-1]) {
+    			  int temp=a[j];
+    			  a[j]=a[j-1];
+    			  a[j-1]=temp;
+    			  
+    			  j--;
+    		  }
+    	  }
+		return a;
+    	  
+      }
+	public static void main(String[] args) {
+		int a[]= {1,2,3,4,5,5};
+         int[]res=InsersionSort(a);
+         for(int i=0;i<a.length;i++) {
+        	 System.out.print(res[i]+" ");
+         }
+	}
+
+}
